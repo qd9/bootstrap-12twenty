@@ -1,0 +1,33 @@
+
+@media (max-width: 480px) {
+    .aside-list {
+        display: none;
+    }
+}
+
+@media (min-width:768px) and (max-width:1200px) {
+    .aside-list {
+        height: 1030px;
+    }
+}
+
+.aside-list {
+    background-color: #505050;
+    height: 1030px;
+    padding-top: 1px;
+}
+
+.aside-list-content {
+    margin-top: 30px;
+}
+
+.aside-font {
+    color: #e8e8e8;
+    margin-top: 5px;
+    &:hover {
+        background-color: #a8a8a8;
+    }
+    &.active {
+        background-color: #a8a8a8;
+    }
+}

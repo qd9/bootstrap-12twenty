@@ -1,0 +1,252 @@
+<div>
+    <!-- header for events -->
+    <div class="row events-header">
+        <div class="col-xs-4 event-size">Events</div>
+        <div class="col-xs-8 text-right add-button">
+            <button type="submit" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-plus"></span> Host a Job Fair</button>
+            <button type="submit" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-plus"></span> Host an Event</button>
+        </div>
+    </div>
+    <!-- form contents -->
+    <div class="row form-collection">
+        <div class="col-xs-12 col-sm-6 col-lg-3 form-col">
+            <form>
+                <div class="form-group">
+                    <label>Student Group</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Employee name</label>
+                    <input class="form-control" placeholder="Employee name">
+                </div>
+                <div class="form-group">
+                    <label>Admin notes</label>
+                    <input class="form-control" placeholder="Admin notes">
+                </div>
+                <div class="form-group">
+                    <label>Event Has Catering</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3 form-col">
+            <form>
+                <div class="form-group">
+                    <label>Event Type</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>Mock Interview</option>
+                        <option>Career Fair</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Event Source</label>
+                    <select class="form-control">
+                        <option></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>career center account manager</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>John</option>
+                        <option>David</option>
+                        <option>Daniel</option>
+                        <option>Jim</option>
+                        <option>Alex</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Event Room</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3 form-col">
+            <form>
+                <div class="form-group">
+                    <label>Event Format</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Event Status</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>Ontime</option>
+                        <option>Delay</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Event has Reception</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Target job pisition</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>Front End Developer</option>
+                        <option>Back End Developer</option>
+                        <option>Java Developer</option>
+                        <option>c# Developer</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3 form-col">
+            <form>
+                <div class="form-group">
+                    <label>Event Timeline</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Post date</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Event Receipt Location</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="form-group">
+                    <label>Industy</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <!-- form footer button -->
+        <div>
+            <div class="col-lg-12 text-right footer-button">
+                <button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span> Clear Filters</button>
+                <button type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-search"></span> Get Results</button>
+            </div>
+        </div>
+    </div>
+    <div class="row result">
+        <div class="col-xs-6">
+            <div class="checkbox visible-xs">
+                <label>
+                    <input type="checkbox" ng-model="$ctrl.allSelected" ng-change="$ctrl.toggleAllEvents()"> Select All
+                </label>
+            </div>
+        </div>
+        <div class="col-xs-6 text-right">
+            <span>Results Found: 5</span>
+        </div>
+    </div>
+    <!-- list by table  -->
+    <div class="row">
+        <div class="col-lg-12 hidden-xs">
+            <table class="table table-hover" align="center">
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" ng-model="$ctrl.allSelected" ng-change="$ctrl.toggleAllEvents()">
+                        </th>
+                        <th>Event Name</th>
+                        <th>Event Date and Time</th>
+                        <th>Event status</th>
+                        <th>Registrants(waitlist)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="event in $ctrl.eventsData">
+                        <td class="td-height">
+                            <input type="checkbox" ng-model="event.selected">
+                        </td>
+                        <td>
+                            <div class="student-group">{{event.student_group}}</div>
+                            <div class="td-font">{{event.employer_name}}</div>
+                            <div class="td-font">{{event.event_type}}</div>
+                        </td>
+                        <td class="td-height td-font">{{event.date}}</td>
+                        <td class="td-height">
+                            <span ng-class="{'closed-status': event.event_status === 'Registration Closed', 'open-status': event.event_status === 'Registration Open'}">{{event.event_status}}</span>
+                        </td>
+                        <td class="td-height td-font">{{event.registrants}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- mobile table style change by using div -->
+        <div class="col-lg-12 visible-xs">
+            <div class="col-xs-12 table-block" ng-repeat="event in $ctrl.eventsData" ng-click="$ctrl.selectEvent(event)" ng-class="{selected: event.selected}">
+                <div class="col-xs-4">
+                    Event Name:
+                </div>
+                <div class="col-xs-8">
+                    <div class="student-group">{{event.student_group}}</div>
+                    <div>{{event.employer_name}}</div>
+                    <div>{{event.event_type}}</div>
+                </div>
+                <div class="col-xs-4">
+                    Event Time:
+                </div>
+                <div class="col-xs-8">
+                    <div class="td-height">{{event.date}}</div>
+                </div>
+                <div class="col-xs-4">
+                    Event Status:
+                </div>
+                <div class="col-xs-8">
+                    <div class="td-height">{{event.event_status}}</div>
+                </div>
+                <div class="col-xs-4">
+                    Registrants:
+                </div>
+                <div class="col-xs-8">
+                    <div class="td-height">{{event.registrants}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
