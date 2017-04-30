@@ -1,4 +1,4 @@
-<div class="aside-list-content">
+<!-- <div class="aside-list-content" ng-init="vm.onInit()">
     <div class="aside-font">Home</div>
 </div>
 <div class="aside-list-content">
@@ -25,4 +25,20 @@
     <div class="aside-font active">Events</div>
     <div class="aside-font">Candidate Search</div>
     <div class="aside-font">Resume Books</div>
+</div>
+ -->
+ <style type="text/css">
+     div.aside-list-content:first-child {
+        margin-top:0px;
+        padding-top:20px;
+     }
+     div.aside-list-content {
+        margin-top:20px;
+     }
+
+ </style>
+ <div ng-init="vm.onInit()">
+    <div ng-repeat="leftNav in vm.leftNavBarObj" class="aside-list-content">
+        <div ng-repeat="title in leftNav.titles" class="aside-font" style="padding:5px 0px 5px 20px; cursor: pointer;margin-top:0px">{{title}}</div>
+    </div>
 </div>

@@ -11,7 +11,7 @@ app.use(methodOverride('X-HTTP-Method-Override'));
  * Applications --------------------------------
  * */
 app.use('/*', function(req, res) {
-    res.sendFile(__dirname + 'src/index.html');
+    res.sendFile(__dirname + '/src/index.html');
 });
 
 

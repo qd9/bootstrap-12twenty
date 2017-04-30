@@ -1,9 +1,59 @@
-<div class="col-lg-6">
-    <a class="navbar-brand" href="#">
+<style type="text/css">
+    .nav-right i.fa {
+        color: black;
+        font-size: 20px;
+        height: 50px;
+        padding:15px 5px 0px 5px;
+    }
+    .nav-right i.fa:hover {
+        background-color: #a8a8a8
+    }
+    @media (min-width: 1200px) {
+        .collapsed-navbar-for-header {
+            display: none !important;
+        }
+    }
+    @media (max-width: 1200px) {
+    .navbar-brand-my-career {
+        display: none;
+    }
+    
+    @media (max-width: 480px) {
+        .navbar-brand {
+            display: none;
+        }
+        .navbar-toggle, .collapsed-navbar-for-header {
+            display: block;
+            float:left !important;
+        }
+    }
+    @media (min-width: 480px) {
+    .navbar-toggle, .collapsed-navbar-for-header {
+        display: none !important;
+    }
+</style>
+<div class="col-lg-5" style="float:left">
+    <div  ng-click="vm.toggle()">
+        <button type="button" class="collapsed navbar-toggle" style="cursor: pointer;"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+    </div>
+    <!-- sdfsdfsdf -->
+    <div style="position:absolute;background-color:black;z-index:999;top:45px;" ng-if="vm.isCollapsed" class="collapsed-navbar-for-header" ng-init="vm.onInit()">
+        <div>
+            <div ng-repeat="leftNav in vm.leftNavBarObj" class="aside-list-content">
+                <div ng-repeat="title in leftNav.titles" class="aside-font" style="padding:5px 5px 5px 20px; cursor: pointer;margin-top:0px">{{title}}</div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-brand" href="#">
         <span> UCLAAnderson</span>
-    </a>
+    </div>
+    <div class="navbar-brand-my-career">
+        <div style="font-size: 22px;color: #337ab7;font-weight: 800;">myCareer</div>
+        <div style="color: #a8a8a8; font-size:12px">Recruiting & Career Management System(CMS)</div>
+    </div>
 </div>
-<div class="col-lg-6 text-right nav-right">
+<div class="col-lg-7 text-right nav-right" style="padding:0px 0px; float:right; ">
     <a href="#">
         <i class="fa fa-bell-o icon"></i>
     </a>
@@ -19,10 +69,12 @@
     <a href="#">
         <i class="fa fa-gear icon"></i>
     </a>
-    <a href="">
+    <a href="" style="position:relative">
         <i class="fa fa-bullhorn icon"></i>
+        <span class="badge badge-warning" style="position: absolute;display: block;left: 10px;top: -20px;font-size: 8px;color: white;background: red;width: 32px;">99+</span>
     </a>
     <a href="">
         <i class="fa fa-user icon"></i>
     </a>
 </div>
+
