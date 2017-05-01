@@ -32,12 +32,12 @@
         display: none !important;
     }
 </style>
-<div class="col-lg-5" style="float:left">
+<div class="col-lg-5" ng-init="vm.onInit()" style="float:left">
     <div  ng-click="vm.toggle()">
         <button type="button" class="collapsed navbar-toggle" style="cursor: pointer;"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
     </div>
     <!-- sdfsdfsdf -->
-    <div style="position:absolute;background-color:black;z-index:999;top:45px;" ng-if="vm.isCollapsed" class="collapsed-navbar-for-header" ng-init="vm.onInit()">
+    <div style="position:absolute;background-color:black;z-index:999;top:45px;" ng-if="vm.isCollapsed" class="collapsed-navbar-for-header">
         <div>
             <div ng-repeat="leftNav in vm.leftNavBarObj" class="aside-list-content">
                 <div ng-repeat="title in leftNav.titles" class="aside-font" style="padding:5px 5px 5px 20px; cursor: pointer;margin-top:0px">{{title}}</div>
